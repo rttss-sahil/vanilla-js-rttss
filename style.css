@@ -28,6 +28,7 @@ body {
     font-family: ubuntu;
     text-align: center;
     background: var(--bg);
+    min-height: calc(100vh-60px);
 }
 .secondary-text, .secondary-text a{
     color: var(--second);
@@ -67,7 +68,9 @@ body .p{
 
 .container a .flex-box h3{
     color: var(--heading);
-
+}
+.flex-box p{
+    color: var(--p);
 }
 .container a .flex-box .to-be{
     color: #575757;
@@ -81,6 +84,7 @@ body .p{
 /* Footer */
 footer {
     border-radius: 10px 10px 0 0 ;
+    height: 60px;
     border-top: 3px solid var(--second);
     position: absolute;
     height: max-content;
