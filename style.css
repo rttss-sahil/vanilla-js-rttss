@@ -1,0 +1,96 @@
+/* Global */
+@font-face {
+    font-family: ubuntu;
+    src: url(./ubuntu/Ubuntu-Medium.ttf);
+}
+
+:root {
+    --p: #0969aa;
+    --bg: #161625;
+    --second: #a200ff7c;
+    --heading: #ff5e00a4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited,
+a:focus {
+    color: var(--p);
+}
+
+body {
+    font-family: ubuntu;
+    text-align: center;
+    background: var(--bg);
+}
+.secondary-text, .secondary-text a{
+    color: var(--second);
+}
+
+/* container */
+h1{
+    color: var(--heading);
+}
+body .p{
+    color: var(--p);
+    font-size: 20px;
+}
+.container {
+    margin: 40px 30px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+}
+
+.container a .flex-box {
+    padding: 5px;
+    height: 190px;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+}
+
+.container a .flex-box:hover{
+    box-shadow: 0 2px 10px var(--second);
+    border: 3px solid gray;
+}
+
+.container a .flex-box h3{
+    color: var(--heading);
+
+}
+.container a .flex-box .to-be{
+    color: #575757;
+    text-decoration: line-through;
+}
+
+.other p{
+    color: var(--p);
+}
+
+/* Footer */
+footer {
+    border-radius: 10px 10px 0 0 ;
+    border-top: 3px solid var(--second);
+    position: absolute;
+    height: max-content;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    color: #d4d4d4;
+    background: var(--bg);
+}
+
+footer p {
+    text-align: center;
+}
