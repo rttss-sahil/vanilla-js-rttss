@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Form validator</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h3>Sign UP !</h3>
+      <form id="form" class="form">
+        <div class="form-control">
+          <label for="username">Username :</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter username" autocomplete="off"
+          />
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            placeholder="Enter Email" autocomplete="off"/>
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter Password"
+            autocomplete="off"
+          />
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="password2">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            placeholder="Enter Password 2"
+            autocomplete="off"
+          />
+          <small>Error Message</small>
+        </div>
+        <input type="submit" name="Submit" />
+      </form>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
