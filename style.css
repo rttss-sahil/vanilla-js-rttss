@@ -28,7 +28,6 @@ body {
     font-family: ubuntu;
     text-align: center;
     background: var(--bg);
-    min-height: calc(100vh-60px);
 }
 .secondary-text, .secondary-text a{
     color: var(--second);
@@ -86,11 +85,8 @@ footer {
     border-radius: 10px 10px 0 0 ;
     height: 60px;
     border-top: 3px solid var(--second);
-    position: absolute;
-    height: max-content;
-    left: 0;
+    position: relative;
     width: 100%;
-    bottom: 0;
     color: #d4d4d4;
     background: var(--bg);
 }
