@@ -1,0 +1,136 @@
+@font-face {
+  font-family: open-sans;
+  src: url(../open_sans/OpenSans-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: open-sans, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  background: #242333;
+  flex-direction: column;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-y: scroll;
+  margin: 0;
+}
+
+body .cont {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+body .cont .movie-container {
+  margin: 20px 0;
+}
+
+body .cont .movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 4px 10px;
+}
+
+body .cont .seat {
+  height: 12px;
+  width: 15px;
+  background: #444451;
+  margin: 3px;
+  border-radius: 10px 10px 0 0;
+}
+
+body .cont .seat.selected {
+  background-color: #6feaf6;
+}
+
+body .cont .seat.occupied {
+  background-color: #fff;
+}
+
+body .cont .seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+body .cont .seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+
+body .cont .showcase {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  justify-content: space-between;
+}
+
+body .cont .showcase li {
+  width: 100%;
+  display: flex;
+}
+
+body .cont .showcase li small {
+  margin: 0 5px;
+}
+
+body .cont .container {
+  perspective: 400px;
+}
+
+body .cont .container .screen {
+  height: 90px;
+  width: 100%;
+  background-color: rgba(70, 70, 70, 0.5);
+  margin: 15px 0 25px;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+body .cont .container .row {
+  display: flex;
+}
+
+body .cont .container .row .seat:not(.occupied):hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  background-color: #6feaf6;
+}
+
+body .cont .text {
+  margin-top: 50px;
+}
+
+body .cont .text span {
+  color: #6feaf6;
+}
+
+body .cont .reset {
+  margin: 20px;
+  padding: 7px 30px;
+  color: #fff;
+  background-color: #444451;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  border: 2px solid #242333;
+  border-radius: 7px;
+  font-size: 21px;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+body .cont .reset:active, body .cont .reset:hover {
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.25);
+  background-color: #1b1a2e;
+}
+/*# sourceMappingURL=style.css.map */
