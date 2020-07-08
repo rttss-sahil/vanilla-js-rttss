@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body figure {
+  border-radius: 10px;
+  width: 70%;
+  background-color: #666;
+}
+
+body figure .video {
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+  height: auto;
+  width: 100%;
+}
+
+body figure .controls {
+  padding: 4px 10px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body figure .controls .progress {
+  width: 80%;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+body figure .controls .progress #progress {
+  width: 100%;
+}
+
+body figure .controls .fa {
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+body figure .controls .fa:hover, body figure .controls .fa:focus {
+  opacity: 0.7;
+  transform: scale(1.25);
+}
+
+body figure .controls .fa-play {
+  color: #22f70f;
+}
+
+body figure .controls .fa-stop {
+  color: #dd2525;
+}
+/*# sourceMappingURL=style.css.map */

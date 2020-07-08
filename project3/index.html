@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../fa/css/font-awesome.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Video Player</title>
+  </head>
+  <body>
+    <figure>
+      <video class="video">
+        <source src="video/video.mp4" type="video/mp4" />
+        <p>
+          Your Browser doesn't support HTML5 video .
+          <br />
+          <a href="./video/video.mp4">Download</a> the video anyway.
+        </p>
+      </video>
+      <div class="controls" id="video-controls">
+        <i class="fa fa-play"></i>
+        <i class="fa fa-stop"></i>
+        <div class="progress">
+          <progress id="progress" value="0" min="0" max="1">
+            <span id="progress-bar"></span>
+          </progress>
+        </div>
+        <p id="timestamp">00:00</p>
+        <i class="fa fa-expand"></i>
+      </div>
+    </figure>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
