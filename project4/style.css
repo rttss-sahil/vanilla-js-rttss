@@ -1,0 +1,78 @@
+@font-face {
+  font-family: ubuntu;
+  src: url(../ubuntu/Ubuntu-Medium.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #666666;
+  margin: 0;
+}
+
+body h1 {
+  color: #ffffff;
+}
+
+body .screen {
+  cursor: pointer;
+  width: 90%;
+  background-color: #000;
+  border-radius: 10px 10px 0 0;
+  align-self: center;
+}
+
+body .controls {
+  background: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 0 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+body .controls > * {
+  margin: 0 10px;
+}
+
+body .controls .btn {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  outline: 0;
+}
+
+body .controls .btn:hover, body .controls .btn:focus {
+  transform: scale(1.25);
+  opacity: 0.4;
+}
+
+body .controls .btn#play {
+  color: #28a745;
+}
+
+body .controls .btn#stop {
+  color: #dc3545;
+}
+
+body .controls .btn#pause {
+  color: white;
+}
+
+body .controls .timestamp {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 15px;
+}
+/*# sourceMappingURL=style.css.map */
