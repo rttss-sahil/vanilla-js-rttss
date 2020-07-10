@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="./progress.css" />
     <link rel="stylesheet" href="../fa/css/font-awesome.css" />
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Video Player 1</title>
   </head>
+
   <body>
+    <h1>Modern Video Player</h1>
     <figure>
       <video class="video">
         <source src="video/video.mp4" type="video/mp4" />
@@ -17,20 +20,29 @@
           <a href="./video/video.mp4">Download</a> the video anyway.
         </p>
       </video>
-      <div class="controls" id="video-controls">
-        <i class="fa fa-play"></i>
-        <i class="fa fa-stop"></i>
-        <div class="progress">
-          <progress id="progress" value="0" min="0" max="1">
-            <span id="progress-bar"></span>
-          </progress>
+      <div class="controls" id="controls">
+        <div class="upper-div" id="upper-div">
+          <p id="video-current" class="video-current">00:00</p>
+          <input
+            type="range"
+            id="progress"
+            min="0"
+            max="="
+            step="0.1"
+            class="progress"
+            value="0"
+          />
+          <p id="video-duration" class="video-duration">00:00</p>
         </div>
-        <p id="timestamp">00:00</p>
-        <i class="fa fa-expand"></i>
+        <div class="lower-div" id="lower-div">
+          <i class="fa fa-stop" id="stop"></i>
+          <i class="fa fa-backward" id="backward"></i>
+          <i class="fa fa-play" id="play"></i>
+          <i class="fa fa-forward" id="forward"></i>
+          <i class="fa fa-expand" id="expand"></i>
+        </div>
       </div>
     </figure>
-
-
 
     <script src="script.js"></script>
   </body>

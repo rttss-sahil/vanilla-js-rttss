@@ -1,0 +1,101 @@
+@font-face{
+    font-family: Ubuntu;
+    src: url('../ubuntu/Ubuntu-Bold.ttf');
+}
+
+:root {
+    --primary-color: #5fbaa7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 80vh;
+    text-align: center;
+    /* padding: 15vw; */
+}
+
+img {
+    width: 10vw;
+}
+
+@media (max-width: 800px) {
+    img {
+        width: 30vw;
+    }
+}
+
+h3 {
+    margin-top: 20px;
+    font-weight: lighter;
+    font-size: .98rem;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+ /* Left Side */
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+select , input {
+    padding: 5px 10px;
+    appearance: none;
+    font-family: Ubuntu;
+    margin: 10px;
+}
+
+select:focus, input:focus {
+    outline: none;
+}
+
+.btn {
+    padding: 5px 15px;
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    font-family: Ubuntu;
+    box-shadow: 0 2px 10px ;
+    cursor: pointer;
+}
+
+/* Right Side */
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+input {
+    text-align: right;
+    border: none;
+    font-size: 35px;
+    width: 70%;
+    z-index: -1;
+}
+
+p {
+    color: #fff;
+    background-color: var(--primary-color);
+    padding: 2px 10px;
+    border-radius: 5px;
+}

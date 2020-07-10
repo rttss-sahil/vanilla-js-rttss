@@ -1,65 +1,109 @@
+@font-face {
+  font-family: ubuntu;
+  src: url("../ubuntu/Ubuntu-Medium.ttf");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
 }
 
 body {
+  font-family: ubuntu, Helvetica, sans-serif;
+  background: linear-gradient(to right, #a200ff7c 30%, #0969aa);
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 75vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: column;
+  overflow-y: scroll;
+}
+
+body h1 {
+  margin-bottom: 20%;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 body figure {
   border-radius: 10px;
-  width: 70%;
-  background-color: #666;
-}
-
-body figure .video {
-  border-radius: 10px 10px 0 0;
-  padding: 10px;
-  height: auto;
-  width: 100%;
-}
-
-body figure .controls {
-  padding: 4px 10px;
-  width: 100%;
+  width: 90%;
+  background-color: rgba(70, 70, 70, 0.7);
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-body figure .controls .progress {
-  width: 80%;
-  margin: 0 20px;
+body figure .video {
+  z-index: 9;
   cursor: pointer;
+  border-radius: 10px;
+  margin: 15px 20px;
+  width: 93%;
 }
 
-body figure .controls .progress #progress {
+body figure .controls {
+  z-index: 10;
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  right: 15px;
+  width: 93%;
+  visibility: hidden;
+  transition: all 0.7s ease;
+}
+
+body figure .controls.visible {
+  visibility: visible;
+  transition: all 0.7s ease;
+}
+
+body figure .controls .upper-div {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body figure .controls .upper-div p {
+  font-size: 10px;
+  padding: 0 5px;
+  color: #fff;
+}
+
+body figure .controls .lower-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 5px;
 }
 
 body figure .controls .fa {
+  font-size: 20px;
   cursor: pointer;
-  margin: 0 10px;
 }
 
-body figure .controls .fa:hover, body figure .controls .fa:focus {
-  opacity: 0.7;
-  transform: scale(1.25);
+body figure .controls .fa.fa-play {
+  color: #d0d1d3;
 }
 
-body figure .controls .fa-play {
-  color: #22f70f;
+body figure .controls .fa.fa-pause {
+  color: #d0d1d3;
 }
 
-body figure .controls .fa-stop {
-  color: #dd2525;
+body figure .controls .fa.fa-stop {
+  color: #d0d1d3;
+}
+
+body figure .controls .fa.fa-forward, body figure .controls .fa.fa-backward {
+  color: #d0d1d3;
+}
+
+body figure .controls .fa.fa-expand {
+  color: #d0d1d3;
 }
 /*# sourceMappingURL=style.css.map */
