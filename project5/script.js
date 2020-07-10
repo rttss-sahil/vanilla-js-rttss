@@ -10,7 +10,7 @@ var calculate = () => {
     fetch(`https://api.exchangerate-api.com/v4/latest/${currencyOne.value}`)
     .then(res => res.json())
     .then(data => {
-        inputTwo.value = data.rates[currencyTwo.value].toFixed(2) ;
+        inputTwo.value = (data.rates[currencyTwo.value].toFixed(2) * inputOne.value);
         rate.textContent = `1 ${currencyOne.value} = ${data.rates[currencyTwo.value]} ${currencyTwo.value} `;
     })
 };
@@ -26,5 +26,5 @@ swap.addEventListener('click', () => {
     currencyTwo.value = temp;
     calculate();
 });
-
-setTimeout(calculate(),500);
+calculate();
+setTimeout(calculate ,500);
