@@ -27,4 +27,4 @@ swap.addEventListener('click', () => {
     calculate();
 });
 
-calculate();
+setTimeout(calculate(),500);
