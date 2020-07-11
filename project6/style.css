@@ -1,0 +1,67 @@
+@font-face {
+    font-family: Ubuntu;
+    src: url('../ubuntu/Ubuntu-Bold.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 10vh;
+    margin-bottom: 10vh;
+}
+
+.body {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.aside {
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    padding-right: 20px;
+    border-right: 1px solid black;
+}
+
+.aside button {
+    font-family: Ubuntu, sans-serif;
+    padding: 10px 0;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.main {
+    /* margin-left: 5vw; */
+    width: 50%;
+}
+
+h3 {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 20px;
+}
+
+.heading {
+    border-bottom: 1px solid black;
+}
+
+h3 strong {
+    margin-right: 60px;
+}
+
+.heading strong {
+    font-size: 30px;
+}

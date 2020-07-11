@@ -18,8 +18,8 @@ var calculate = () => {
 // Event Listeners
 currencyOne.addEventListener('click', calculate);
 currencyTwo.addEventListener('click', calculate);
-inputOne.addEventListener('change', calculate);
-inputTwo.addEventListener('change', calculate);
+inputOne.addEventListener('keyup', calculate);
+inputTwo.addEventListener('keyup', calculate);
 swap.addEventListener('click', () => {
     let temp = currencyOne.value;
     currencyOne.value = currencyTwo.value;
