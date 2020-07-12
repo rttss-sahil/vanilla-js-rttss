@@ -47,11 +47,17 @@ h1 {
     width: 50%;
 }
 
+.main ol{
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
 h3 {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .heading {
@@ -64,4 +70,8 @@ h3 strong {
 
 .heading strong {
     font-size: 30px;
+}
+
+main div {
+    margin-top: 20px;
 }
