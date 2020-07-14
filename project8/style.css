@@ -69,3 +69,38 @@ form button {
     padding: 0 10px;
     border-radius: 5px;
 }
+
+.container {
+    width: 90%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.container .item {
+    border-radius: 10px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container .it {
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    height: 150px;
+}
+
+.container .item:hover .it::after {
+    /* content: ''; */
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+
+}
