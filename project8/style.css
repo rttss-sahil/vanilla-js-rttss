@@ -1,0 +1,71 @@
+@font-face {
+    font-family: ubuntu;
+    src: url('../ubuntu/Ubuntu-Bold.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button,
+input {
+    border: 0;
+}
+
+button {
+    cursor: pointer;
+    outline: 0;
+
+}
+
+body {
+    background: #2d2013;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 30px;
+    font-family: ubuntu, sans-serif;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+}
+
+form input {
+    height: 40px;
+    width: 300px;
+    padding: 8px 20px;
+    line-height: 0.2;
+    outline: 0;
+    border-radius: 10px 0 0 10px;
+    font-size: 15px;
+    font-family: ubuntu, sans-serif;
+}
+
+form button {
+    border-left: 1px solid grey;
+    margin: 0 0 0 -10px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 0 10px 10px 0;
+}
+
+.random {
+    height: 40px;
+    margin: 0 10px;
+    padding: 0 10px;
+    border-radius: 5px;
+}

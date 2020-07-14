@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #34495e;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80vh;
+    align-items: center;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.game-container {
+    padding: 20px 30px;
+    position: relative;
+    margin: auto;
+    width: 450px;
+    height: 350px;
+}
+
+.figure-container {
+    fill: transparent;
+    stroke: white;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.wrong-letters-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+}
+
+.wrong-letters-container p {
+    margin: 0 0 5px;
+}
+
+.wrong-letters-container span {
+    font-size: 24px;
+}
+
+.word {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.letter {
+    border-bottom: 3px solid #3980b9;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+    height: 50px;
+    width: 20px;
+}
+
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.popup {
+    background-color: #2980b9;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+.popup button {
+    color: #2980b9;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: white;
+    padding: 12px 20px;
+    outline: 0;
+    border: 0;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.popup button:active {
+    transform: scale(0.98);
+}
+
+.notification-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 0 0;
+    padding: 15px 20px;
+    position: absolute;
+    bottom: -50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.notification-container p {
+    margin: 0;
+
+}
+
+.notification-container .show {
+    transform: translateY(-50px);
+}
