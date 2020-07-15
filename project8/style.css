@@ -17,7 +17,6 @@ input {
 button {
     cursor: pointer;
     outline: 0;
-
 }
 
 body {
@@ -71,6 +70,7 @@ form button {
 }
 
 .container {
+    display: none;
     width: 90%;
     margin-top: 50px;
     display: grid;
@@ -86,21 +86,83 @@ form button {
 }
 
 .container .it {
+    transition: all 0.3s ease;
     cursor: pointer;
     border-radius: 10px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
     height: 150px;
 }
 
-.container .item:hover .it::after {
-    /* content: ''; */
-    cursor: pointer;
+.it p {
+    font-size: 20px;
+    font-family: ubuntu;
+    visibility: hidden;
+    z-index: 0;
+}
+
+.item:hover>.it p {
+    visibility: visible;
+}
+
+.container .item:hover>.it {
+    border-radius: 10px;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
     background: rgba(0, 0, 0, 0.5);
+}
 
+.single {
+    width: 70%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.single h2 {
+    margin: 20px;
+}
+
+.single img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.single .area {
+    display: flex;
+    margin: 20px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+strong {
+    border-bottom: 2px solid white;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.single .instructions {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 5px;
+    justify-content: space-between;
+}
+
+.single .ingredients {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.single.ingredients div {
+    background: #ccc;
+    color: #000;
 }
