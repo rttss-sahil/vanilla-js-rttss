@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    .main {
+        position: relative;
+    }
+    max-height: 100vh;
+    background-color: #020a20;
+    color: #ccc;
+    .images-heading {
+        margin: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        max-height: 100px;
+        .rock img,
+        .paper img,
+        .scissors img {
+            height: 74px;
+        }
+    }
+    h1,
+    h2,
+    .head {
+        text-align: center;
+        transition: all 0.5s ease-in-out;
+    }
+    .play-now {
+        cursor: pointer;
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+        .circle {
+            margin: 0 10px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            height: 40px;
+            width: 40px;
+            position: relative;
+            transition: all 0.4s ease;
+            .triangle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-40%, -50%) rotateZ(90deg);
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 10px 17.2px 10px;
+                border-color: transparent transparent #fff transparent;
+                background-color: transparent;
+            }
+        }
+        &:hover {
+            & .circle {
+                border: 1px solid #020a20;
+                background-color: #fff;
+                & .triangle {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-40%, -50%) rotateZ(90deg) scale(0.75);
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 10px 17.2px 10px;
+                    border-color: transparent transparent #020a20 transparent;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+    .game {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        .headings {
+            color: #f33851;
+        }
+        .score {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .hands {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            // .hand {
+            //     height: 40%;
+            //     width: 100%;
+            //     background: url('https://afiniti.com/static/media/rock.fae7b245.png');
+            //     background-size: contain;
+            //     background-repeat: no-repeat;
+            // }
+            .no-hand {
+                height: 40%;
+                width: 100%;
+                background: url('./img/n.png');
+                background-size: contain;
+                animation-name: rock-rock;
+                animation-duration: 0.6s;
+                animation-timing-function: ease-in-out;
+                background-repeat: no-repeat;
+            }
+            @keyframes rock-rock {
+                0% {
+                    transform: rotate(-20deg) translateZ(-20px);
+                }
+                25% {
+                    transform: rotate(20deg) translateZ(20px);
+                }
+                50% {
+                    transform: rotate(-20deg) translateZ(-20px);
+                }
+                100% {
+                    transform: rotate(20deg) translateZ(20px);
+                }
+            }
+            .computer-hand,
+            .human-hand {
+                border: 1px solid rgba(#ccc, 0.1s);
+                background-color: rgba(#ccc, 0.1);
+                height: 200px;
+                width: 200px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .human-hand {
+                transform: rotateY(180deg);
+            }
+        }
+        .message {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .option {
+            margin: 30px 0 50px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            .rock,
+            .paper,
+            .scissors {
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+                background: #f33851;
+                width: 60px;
+                border: 0;
+                outline: 0;
+                border-radius: 50%;
+            }
+            .rock svg,
+            .paper svg,
+            .scissors svg {
+                height: 60px;
+            }
+        }
+    }
+}
